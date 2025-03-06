@@ -53,3 +53,6 @@ Now, enjoy your enhanced and stylish PowerShell experience! 🚀
 # Fastfetch
 Windows alternative to neofetch
 https://github.com/fastfetch-cli/fastfetch
+
+# Windows terminal nord theme
+https://github.com/thismat/nord-windows-terminal
