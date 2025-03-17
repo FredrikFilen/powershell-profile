@@ -467,6 +467,20 @@ $PSReadLineOptions = @{
 }
 Set-PSReadLineOption @PSReadLineOptions
 
+# Restart explorer
+function restartExplorer {
+    $explorerId = (Get-Process explorer).Id
+Stop-Process -Id $explorerId -Force
+Start-Process explorer.exe
+
+# Remove icon cache
+# $IconCachePath = "$env:localappdata\Microsoft\Windows\Explorer\iconcache*"
+# Stop-Process -processname explorer
+# Remove-Item -path $IconCachePath -force -verbose
+# Start-Process explorer
+
+}
+
 # Custom key handlers
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
